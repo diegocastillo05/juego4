@@ -54,6 +54,10 @@
   object-fit: cover;
 }
 
+.contentJuego4 .espacio .cardContentImagen.active img {
+  filter: grayscale(0);
+}
+
 .contentJuego4 .espacio .card1 {
   grid-area: 1 / 1 / 2 / 2;
 }
@@ -102,6 +106,8 @@
   min-height: 100%;
   min-width: 100%;
   object-fit: cover;
+  pointer-events: none;
+  user-select: none;
 }
 
 .contentJuego4 .items {
@@ -175,6 +181,21 @@
   border: 5px solid transparent;
   border-top: 0;
   border-bottom: 10px solid #20b038;
+}
+.contentJuego4 .ContentItem.active {
+  overflow: initial;
+}
+.contentJuego4 .ContentItem.active img {
+  opacity: 0;
+}
+.contentJuego4 .ContentItem.false {
+  border: 2px dashed #da291c;
+}
+.contentJuego4 .ContentItem.false .item {
+  transform: rotate(-4deg);
+}
+.contentJuego4 .ContentItem.true {
+  border: 2px dashed #20b038;
 }
 
 .contentJuego4 .ContentItem.active .mensaje,
