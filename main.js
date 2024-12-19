@@ -18,7 +18,6 @@ const cardContentImagen = document.querySelector(".cardContentImagen");
 function drop(event) {
     event.preventDefault();
 
-    // Verifica que el target sea un ContentItem
     if (!event.target.classList.contains("ContentItem")) {
         console.log("No puedes soltar aquí.");
         return;
@@ -27,17 +26,14 @@ function drop(event) {
     const data = event.dataTransfer.getData("text");
     const draggedElement = document.getElementById(data);
 
-    // Evita colocar múltiples items en el mismo ContentItem
     const existingItem = event.target.querySelector(".item");
     if (!existingItem) {
         const contentImage = event.target.querySelector("img");
 
         if (contentImage) {
-            // Inserta el item como hermano del img
             contentImage.insertAdjacentElement("afterend", draggedElement);
             event.target.classList.add("active");
 
-            // Si el item tiene la clase true, también asignarla al ContentItem
             if (draggedElement.classList.contains("true")) {
                 event.target.classList.add("true");
                 event.target.classList.remove("false");
@@ -50,7 +46,6 @@ function drop(event) {
         console.log("Este espacio ya tiene un ítem.");
     }
 
-    // Actualiza el estado de los botones y cardContentImagen
     updateButtonsState();
     updateCardContentImagen();
 }
@@ -81,16 +76,28 @@ function updateCardContentImagen() {
     }
 }
 
+const items = document.querySelectorAll(".item");
+items.forEach(item => {
+    const parentContenttem = item.closest(".contenttem");
+    item.dataset.originalParent = parentContenttem.id || parentContenttem.getAttribute("data-id");
+});
+
 document.getElementById("volver").addEventListener("click", function () {
-    const items = document.querySelectorAll(".item");
     const originalContainer = document.querySelector(".items");
 
-    // Devuelve todos los items al contenedor original
     const allContentItems = document.querySelectorAll(".ContentItem");
     allContentItems.forEach(item => {
         const draggedItem = item.querySelector(".item");
         if (draggedItem) {
-            originalContainer.appendChild(draggedItem);
+            const originalParentId = draggedItem.dataset.originalParent;
+            const originalParent = document.getElementById(originalParentId) || document.querySelector(`.contenttem[data-id="${originalParentId}"]`);
+
+            if (originalParent) {
+                originalParent.appendChild(draggedItem);
+            } else {
+                console.error("No se encontró el contenedor original para", draggedItem);
+                originalContainer.appendChild(draggedItem);
+            }
         }
         item.classList.remove("active", "true", "false");
     });
