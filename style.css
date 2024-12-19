@@ -121,6 +121,14 @@
   flex-wrap: wrap;
 }
 
+.contentJuego4 .items .contenttem {
+  background: #2d2d2d;
+  width: 285px;
+  min-height: 113px;
+  border-radius: 18px;
+  display: flex;
+}
+
 .contentJuego4 .item {
   max-width: 225px;
   width: 100%;
@@ -135,7 +143,7 @@
   font-size: 18px;
   font-weight: 700;
   border-radius: 18px;
-  background: var(--Grises-Gris-800, #2d2d2d);
+  background: #2d2d2d;
 }
 
 .contentJuego4 .item img {
@@ -299,6 +307,10 @@
     max-width: 160px;
     padding: 25px 13px;
   }
+  .contentJuego4 .items .contenttem {
+    max-width: 186px;
+    min-height: 155px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -333,6 +345,10 @@
   }
   .contentJuego4 .ContentItem .mensaje {
     width: 170px;
+  }
+  .contentJuego4 .items .contenttem {
+    max-width: 186px;
+    min-height: 140px;
   }
 }
 
@@ -390,5 +406,9 @@
   }
   .contentJuego4 .espacio .cardContentImagen {
     height: 190px;
+  }
+  .contentJuego4 .items .contenttem {
+    max-width: 134px;
+    min-height: 127px;
   }
 }
