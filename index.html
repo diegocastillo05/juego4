@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Juego 4</title>
+  </head>
+  <body>
+    <div class="contentJuego4">
+      <div class="container">
+        <div class="part1">
+          <h2>¡Pongamos a prueba lo aprendido!</h2>
+          <p>
+            ¡Los repetidores amplían la señal de tu router, llevándola con mayor
+            potencia a más espacios! Ahora arrastra los 4 consejos para
+            aprovecharlos al máximo.
+          </p>
+        </div>
+        <div class="espacio">
+          <div class="cards">
+            <div class="cardContentImagen">
+              <img src="img/imagen_juego4.png" alt="" />
+            </div>
+            <div
+              class="ContentItem content1 card1"
+              ondragover="allowDrop(event)"
+              ondrop="drop(event)"
+              data-card="card1"
+            >
+              <img src="img/imagen_signo.png" alt="" />
+            </div>
+            <div
+              class="ContentItem content2 card2"
+              ondragover="allowDrop(event)"
+              ondrop="drop(event)"
+              data-card="card2"
+            >
+              <img src="img/imagen_signo.png" alt="" />
+            </div>
+            <div
+              class="ContentItem content3 card3"
+              ondragover="allowDrop(event)"
+              ondrop="drop(event)"
+              data-card="card3"
+            >
+              <img src="img/imagen_signo.png" alt="" />
+            </div>
+            <div
+              class="ContentItem content4 card4"
+              ondragover="allowDrop(event)"
+              ondrop="drop(event)"
+              data-card="card4"
+            >
+              <img src="img/imagen_signo.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="items">
+          <div
+            class="item"
+            draggable="true"
+            id="item"
+            ondragstart="drag(event)"
+            data-card="card1"
+          >
+            Conecta tus repetidores a router mediante un cable
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item2"
+            ondragstart="drag(event)"
+            data-card="card2"
+          >
+            Usa repetidores certificados por Claro con homologación local
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item3"
+            ondragstart="drag(event)"
+            data-card="card3"
+          >
+            Coloca tu repetidor al lado de una puerta
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item4"
+            ondragstart="drag(event)"
+            data-card="card4"
+          >
+            Ubica tu repetidor lejos de tu router y las áreas con buena señal
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item5"
+            ondragstart="drag(event)"
+            data-card="card5"
+          >
+            Ubica el repetidor cerca a las áreas con buena señal
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item4"
+            ondragstart="drag(event)"
+            data-card="card6"
+          >
+            Conecta tus repetidores a tu router por WiFi
+          </div>
+          <div
+            class="item"
+            draggable="true"
+            id="item4"
+            ondragstart="drag(event)"
+            data-card="card7"
+          >
+            Verifica que tus repetidores soporten la velocidad de tu plan
+          </div>
+        </div>
+        <div class="btns">
+          <button id="continuar">Continuar</button>
+          <button id="volver">Volver a intentar</button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

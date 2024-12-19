@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.contentJuego4 {
+  min-height: 100vh;
+  background-color: #000;
+  padding: 50px 0;
+}
+
+.contentJuego4 .container {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contentJuego4 .espacio {
+  position: relative;
+  max-width: 1202px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.contentJuego4 .espacio .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 27px;
+  grid-row-gap: 20px;
+  max-width: 1202px;
+  margin: 0 auto;
+}
+
+.contentJuego4 .espacio .cardContentImagen {
+  grid-area: 1 / 2 / 3 / 4;
+  display: flex;
+  position: relative;
+  height: 288px;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.contentJuego4 .espacio .cardContentImagen img {
+  border-radius: 18px;
+  filter: grayscale(1);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.contentJuego4 .espacio .card1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.contentJuego4 .espacio .card2 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.contentJuego4 .espacio .card3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.contentJuego4 .espacio .card4 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.contentJuego4 .espacio .card {
+  border-radius: 26.05px;
+  padding: 15px;
+}
+
+.contentJuego4 .espacio .card .contentImg {
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.contentJuego4 .espacio .card .contentImg img {
+  width: 100%;
+}
+.contentJuego4 .ContentItem {
+  display: flex;
+  z-index: 2;
+  border-radius: 18px;
+  position: relative;
+  border: 2px dashed #dcdcdc;
+  overflow: hidden;
+}
+
+.contentJuego4 .ContentItem img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.contentJuego4 .items {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 17px;
+  max-width: 1202px;
+  margin: 0 auto;
+  margin-top: 70px;
+  flex-wrap: wrap;
+}
+
+.contentJuego4 .item {
+  max-width: 225px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 30px;
+  color: #fff;
+  text-align: center;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 18px;
+  background: var(--Grises-Gris-800, #2d2d2d);
+}
+
+.contentJuego4 .item img {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+.contentJuego4 .ContentItem .mensaje {
+  position: absolute;
+  border-radius: 5px;
+  background: #20b038;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  pointer-events: none;
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 220px;
+  padding: 10px;
+  display: none;
+}
+.contentJuego4 .ContentItem.true .item {
+  background: #0c4e17;
+  border: 1px solid #20b038;
+  color: #fff;
+}
+.contentJuego4 .ContentItem.false .item {
+  background: #83170f;
+  border: 1px solid #da291c;
+  color: #fff;
+}
+.contentJuego4 .ContentItem .mensaje::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 0;
+  border-bottom: 10px solid #20b038;
+}
+
+.contentJuego4 .ContentItem.active .mensaje,
+.contentJuego4 .ContentItem.true .mensaje {
+  display: block;
+}
+.contentJuego4 .ContentItem.false .mensaje {
+  display: none;
+}
+.contentJuego4 .btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  gap: 12px;
+}
+
+.contentJuego4 .btns button {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 600;
+  background: #9b9b9b;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  pointer-events: none;
+}
+
+.contentJuego4 .btns button.active {
+  background: #da291c;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.contentJuego4 .part1 {
+  max-width: 1202px;
+  margin: 0 auto;
+}
+
+.contentJuego4 .part1 h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 68px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contentJuego4 .part1 p {
+  color: #fff;
+  font-family: "AMX", "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.item.dragging {
+  opacity: 1 !important; /* Eliminar opacidad */
+  box-shadow: none; /* Eliminar sombras */
+}
+
+@media (min-width: 640px) {
+  .contentJuego4 .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contentJuego4 .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentJuego4 .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .contentJuego4 .container {
+    max-width: 1260px;
+  }
+}
+
+@media (min-width: 1460px) {
+  .contentJuego4 .container {
+    max-width: 1460px;
+  }
+}
+
+@media (max-width: 1259px) {
+  .contentJuego4 .item {
+    max-width: 160px;
+    padding: 25px 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentJuego4 .part1 h2 {
+    font-size: 29px;
+  }
+  .contentJuego4 .part1 p {
+    font-size: 14px;
+  }
+  .contentJuego4 .espacio {
+    margin-top: 30px;
+  }
+  .contentJuego4 .items {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contentJuego4 .items {
+    gap: 14px;
+  }
+  .contentJuego4 .item {
+    font-size: 14px;
+    padding: 35px 13px;
+  }
+  .contentJuego4 .espacio .card .contentImg {
+    border-radius: 16px;
+  }
+  .contentJuego4 .espacio .card {
+    border-radius: 17px;
+    padding: 10px;
+  }
+  .contentJuego4 .ContentItem .mensaje {
+    width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentJuego4 .ContentItem .mensaje {
+    width: 250px;
+  }
+  .contentJuego4 .espacio .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+  }
+  .contentJuego4 .espacio .cardContentImagen {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  .contentJuego4 .espacio .card1 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .contentJuego4 .espacio .card2 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .contentJuego4 .espacio .card3 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .contentJuego4 .espacio .card4 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .contentJuego4 .ContentItem {
+    height: 126px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contentJuego4 .btns {
+    margin-top: 20px;
+  }
+  .contentJuego4 .part1 h2 {
+    font-size: 24px;
+  }
+  .contentJuego4 .part1 p {
+    font-size: 14px;
+  }
+  .contentJuego4 .items {
+    column-gap: 16px;
+    row-gap: 23px;
+  }
+  .contentJuego4 .item {
+    font-size: 13px;
+    padding: 30px 12px;
+    max-width: 134px;
+  }
+  .contentJuego4 .items {
+    margin-top: 40px;
+  }
+  .contentJuego4 .espacio .cardContentImagen {
+    height: 190px;
+  }
+}
